@@ -1,0 +1,12 @@
+@import 'src/styles/variables';
+
+.body_wrapper {
+  display: block;
+  min-height: calc(100vh - 67px);
+  padding: var(--space-xxl);
+
+  box-sizing: border-box;
+  text-align: left;
+
+  background-color: #F5F7F9;
+}

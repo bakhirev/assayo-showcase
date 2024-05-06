@@ -1,0 +1,8 @@
+@import 'src/styles/variables';
+
+.title {
+  font-size: 24px;
+  font-weight: 100;
+  margin: 0 0 var(--space-xxl) var(--space-xxl);
+  color: var(--color-black);
+}

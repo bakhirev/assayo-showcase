@@ -1,0 +1,16 @@
+user_id на входе
+ user
+  - /getReports          список доступных отчётов
+  - /createFileToken     одноразовая ссылка
+  - /getFileByToken      файл по одноразовой ссылке
+
+ api
+  -> /getTasks            список заданий для Crawler
+  <- /getRepositories     получить список репозиториев
+                          (по отделу)
+	oauth
+	-> login/pas
+	<- token
+	-> getAccess
+	<- refresh/access token
+	-> getRepositories by timer

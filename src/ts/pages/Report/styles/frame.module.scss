@@ -1,0 +1,45 @@
+@import 'src/styles/variables';
+
+.frame {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+
+  &_buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: inline-block;
+    width: 240px;
+    padding: var(--space-m) var(--space-xxl) var(--space-xxs);
+
+    opacity: 0;
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px var(--color-black);
+
+    background-color: var(--color-black);
+    animation: frame_buttons .5s linear 6s forwards;
+  }
+
+  &_button,
+  &_button:first-child,
+  &_button:last-child {
+    margin: 0 auto;
+  }
+
+  &_button {
+    opacity: 0;
+    animation: frame_buttons 1s linear 6s forwards;
+  }
+}
+
+@keyframes frame_buttons {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

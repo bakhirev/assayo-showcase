@@ -1,0 +1,29 @@
+@import 'src/styles/variables';
+
+.control_panel {
+  position: relative;
+  text-align: right;
+
+  &_buttons {
+    position: absolute;
+    top: -44px;
+    right: 0;
+  }
+
+  &_icon {
+    display: inline-block;
+    width: var(--space-xxl);
+    height: var(--space-xxl);
+    padding: 0;
+    margin-left: var(--space-l);
+
+    vertical-align: top;
+    cursor: pointer;
+  }
+}
+
+@media print {
+  .data_view_buttons {
+    display: none;
+  }
+}

@@ -1,0 +1,32 @@
+@import 'src/styles/variables';
+
+.header {
+  display: block;
+  width: 100%;
+  padding: var(--space-m) var(--space-xxl);
+  margin: 0;
+  text-align: left;
+
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-white);
+
+  &_logo {
+    display: inline-block;
+    height: var(--space-xl);
+    width: 240px;
+
+    text-align: left;
+    box-sizing: border-box;
+    vertical-align: middle;
+
+    background-image: url('../../../../assets/logo.svg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+
+  &_navigation {
+    display: inline-block;
+    width: 400px;
+    vertical-align: middle;
+  }
+}

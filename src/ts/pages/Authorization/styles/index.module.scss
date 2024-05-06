@@ -1,0 +1,19 @@
+@import 'src/styles/variables';
+
+.login {
+  &_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F5F7F9;
+  }
+
+  &_window {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+  }
+}
