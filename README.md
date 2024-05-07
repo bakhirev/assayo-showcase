@@ -1,8 +1,8 @@
 # Reports showcase UI
 
-Отображение списка отчётов по git репозиториям.
+Отображение списка отчётов по git репозиториям ([демо](https://assayo.online/showcase/?ref=github)).
 
-<a href="https://assayo.online/demo/?dump=./test.txt" target="_blank"><img src="https://assayo.online/seo/github/showcase.png" width="100%" /></a>
+<a href="https://assayo.online/showcase/?ref=github" target="_blank"><img src="https://assayo.online/seo/github/showcase.png" width="100%" /></a>
 
 Это вспомогательное приложение. Оно имеет двойное предназначение:
 - является витриной для отображения текущих отчётов, доступных пользователю;
