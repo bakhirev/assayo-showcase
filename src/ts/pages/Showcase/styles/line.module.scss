@@ -1,0 +1,84 @@
+@import 'src/styles/variables';
+
+.showcase_line {
+  display: block;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+
+  vertical-align: top;
+  box-sizing: border-box;
+  text-decoration: none;
+  break-inside: avoid;
+
+  border-bottom: 1px solid var(--color-border);
+  background-color: #FFFFFF;
+
+  &:hover {
+    background-color: #F7FAFE;
+  }
+
+  &_gap {
+    display: inline-block;
+    width: var(--space-xxl);
+    height: var(--space-m);
+    vertical-align: top;
+  }
+
+  &_wrapper {
+    margin: 0 auto var(--space-xxl);
+    width: 100%;
+  }
+
+  &_open {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin: var(--space-sm) var(--space-s) 0 0;
+
+    vertical-align: top;
+    cursor: pointer;
+  }
+
+  &_title {
+    font-size: var(--font-m);
+    font-weight: 100;
+
+    display: inline-block;
+    margin: var(--space-m) auto;
+    padding: 0;
+
+    line-height: 1.5;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+
+    color: var(--color-black);
+
+    &_link {
+      cursor: pointer;
+      color: var(--color-button);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &_buttons {
+    display: inline-block;
+    float: right;
+    vertical-align: top;
+  }
+
+  &_button {
+    margin-top: var(--space-xxs);
+  }
+
+  &_cover {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: top;
+  }
+}

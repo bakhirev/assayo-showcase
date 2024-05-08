@@ -12,11 +12,14 @@ import pt from 'ts/translations/pt';
 import ru from 'ts/translations/ru';
 import zh from 'ts/translations/zh';
 
-import initializationI18n from './ts/helpers/i18n';
+import initializationI18n from 'ts/helpers/i18n';
 
-import Authorization from 'ts/pages/Authorization';
+import IAppSetting from 'ts/interfaces/AppSetting';
 import Notifications from 'ts/components/Notifications';
+import applicationSettingsStore from 'ts/store/ApplicationSettings';
+import Authorization from 'ts/pages/Authorization';
 import applyUrlCommands from 'ts/helpers/RPC';
+import applicationApi from 'ts/api/application';
 
 import './styles/index.scss';
 
@@ -49,7 +52,10 @@ function renderReactApplication() {
   );
 }
 
-applyUrlCommands((parameters: any) => {
-  initializationI18n(parameters.lang || parameters.language);
-  renderReactApplication();
+applicationApi.getConfig().then((config: IAppSetting) => {
+  applicationSettingsStore.setSettings(config);
+  applyUrlCommands((parameters: any) => {
+    initializationI18n(parameters.lang || parameters.language);
+    renderReactApplication();
+  });
 });

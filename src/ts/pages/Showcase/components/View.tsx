@@ -5,7 +5,8 @@ import { IPagination } from 'ts/interfaces/Pagination';
 import PageWrapper from 'ts/components/Page/wrapper';
 import viewSettings from 'ts/store/ViewSettings';
 
-import CardsView from './CardsView';
+import CardsView from './cards';
+import LineView from './line';
 import TableView from './TableView';
 
 interface IViewProps {
@@ -23,6 +24,10 @@ export default observer(({ response, mode }: IViewProps) => {
   if (type === 'cards') {
     return (
       <CardsView response={response} />
+    );
+  } else {
+    return (
+      <LineView response={response} />
     );
   }
 

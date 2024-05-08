@@ -1,15 +1,15 @@
 @import 'src/styles/variables';
 
 .card_wrapper {
-  column-count: 5;
-  column-gap: var(--space-xxl);
   margin: 0 auto;
+  width: calc(100% + 24px);
 }
 
 .card_with_icon {
-  display: block;
+  display: inline-block;
+  width: 23%;
   min-height: 270px;
-  margin: 0 0 var(--space-xxl) 0;
+  margin: 0 var(--space-xxl) var(--space-xxl) 0;
   padding: var(--space-xxl);
 
   vertical-align: top;
@@ -60,21 +60,5 @@
     font-size: var(--font-s);
     margin-bottom: var(--space-s);
     color: var(--color-42);
-  }
-}
-
-@media (max-width: 900px) {
-  .card_with_icon,
-  .card_with_icon_long {
-    min-height: 220px;
-    padding: 16px 0;
-
-    &_title {
-      margin: 0;
-    }
-
-    &_description {
-      display: none;
-    }
   }
 }

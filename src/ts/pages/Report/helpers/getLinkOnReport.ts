@@ -1,8 +1,11 @@
+import appSettingsStore from 'ts/store/ApplicationSettings';
+
 export default function getLinkOnReport(
   token: string,
   language?: string,
 ): string {
-  if (Math.random()) return 'https://assayo.online/demo/?lang=ru&dump=./test.txt';
+  const defaultReportUrl = appSettingsStore.settings?.defaultReportUrl;
+  if (defaultReportUrl) return defaultReportUrl;
 
   const baseUrl = `${location.origin}${location.pathname}`;
   const prefix = baseUrl[baseUrl.length - 1] === '/' ? '' : '/';

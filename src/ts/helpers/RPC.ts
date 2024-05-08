@@ -15,15 +15,6 @@ function getParametersFromURL(): IHashMap<string> {
   };
 }
 
-function loadJsDump(url: string, callback: Function) {
-  const script = document.createElement('script');
-  script.src = url;
-  script.async = true; // @ts-ignore
-  script.onload = callback; // @ts-ignore
-  script.onerror = callback;
-  document.body.appendChild(script);
-}
-
 function loadCssFile(url: string) {
   const node = document.createElement('link');
   node.setAttribute('rel', 'stylesheet');
@@ -56,10 +47,5 @@ export default function applyUrlCommands(callback: Function) {
     localization.language = language;
   }
 
-  const jsUrl = parameters.dump || parameters.log;
-  if (jsUrl) {
-    loadJsDump(jsUrl, () => callback(parameters));
-  } else {
-    callback(parameters);
-  }
+  callback(parameters);
 }

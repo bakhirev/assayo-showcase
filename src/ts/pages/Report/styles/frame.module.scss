@@ -17,21 +17,16 @@
 
     opacity: 0;
     box-sizing: border-box;
-    box-shadow: 0 5px 10px var(--color-black);
+    box-shadow: -5px 5px 10px var(--color-black);
 
     background-color: var(--color-black);
-    animation: frame_buttons .5s linear 6s forwards;
+    animation: frame_buttons .5s linear 6.5s forwards;
   }
 
   &_button,
   &_button:first-child,
   &_button:last-child {
     margin: 0 auto;
-  }
-
-  &_button {
-    opacity: 0;
-    animation: frame_buttons 1s linear 6s forwards;
   }
 }
 
@@ -41,5 +36,23 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+  .frame {
+    &_buttons {
+      width: 60px;
+      height: 50px;
+    }
+    &_button {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .frame_buttons {
+    visibility: hidden;
   }
 }

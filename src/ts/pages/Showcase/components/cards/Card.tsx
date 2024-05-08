@@ -1,13 +1,14 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import style from '../styles/card.module.scss';
+import style from '../../styles/card.module.scss';
 
 interface ICardProps {
   title: string;
   description?: string;
   icon?: string;
   link?: string;
+  width?: number;
 }
 
 function Card({
@@ -15,6 +16,7 @@ function Card({
   description,
   icon,
   link,
+  width,
 }: ICardProps): React.ReactElement | null {
   const { t } = useTranslation();
 
@@ -22,6 +24,7 @@ function Card({
     <a
       href={link}
       className={style.card_with_icon}
+      style={{ width: `${width}px` }}
     >
       <h4 className={style.card_with_icon_title}>
         {t(title || '')}
@@ -41,6 +44,7 @@ Card.defaultProps = {
   description: '',
   icon: undefined,
   link: undefined,
+  width: 240,
 };
 
 export default Card;
